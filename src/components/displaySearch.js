@@ -52,7 +52,7 @@
 function createImageCard(data){
     const container = document.createElement("div");
     const img = document.createElement("img");
-    img.setAttribute("src", data.urls.thumb );
+    img.setAttribute("src", data.urls.regular );
     img.id = data.id;
     container.className = "img-cont"
 
@@ -64,8 +64,8 @@ function createImageCard(data){
 function displayResults(data, target){
     const container = document.getElementById(target);
     const frag = new DocumentFragment()
-    for ( const item of data ){
-        const img = createImageCard(item);
+    for ( let i = 0; i < data.length - 1; i++ ){
+        const img = createImageCard(data[i]);
         frag.append(img);
     }
     container.innerHTML = null;

@@ -31,11 +31,15 @@ function createSearchBar(){
     const searchBar = document.createElement("div");
     const searchIcon = document.createElement("div");
     const input = document.createElement("input");
-    const capture = document.createElement("div");
+    const title = document.createElement("div");
+
+    searchIcon.innerHTML = "&#x1F50D;&#xFE0E";
+    title.innerHTML = "<h1>Search Images</h1>";
+    input.placeholder = "Type to search"
 
     searchBar.id = "search-bar";
 
-    searchBar.append( searchIcon, input, capture );
+    searchBar.append( title, searchIcon, input );
     return searchBar;
 }
 
