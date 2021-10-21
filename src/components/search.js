@@ -33,4 +33,4 @@ function handleKeyPress(){
     }
 }
 
-export default handleKeyPress;
+export { handleSearch, handleKeyPress };
